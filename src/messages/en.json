@@ -1,0 +1,30 @@
+{
+  "global": {
+    "appName": "My Application",
+    "appDescription": "This is a sample application.",
+    "loading": "Loading...",
+    "error": "An error occurred. Please try again or contact support."
+  },
+  "gallery": {
+    "title": "Gallery",
+    "description": "A collection of images and videos.",
+    "image_not_found": "Image not found",
+    "results_per_page": "Results per page"
+  },
+  "artwork": {
+    "artist": "Artist",
+    "date": "Date",
+    "department": "Department",
+    "classification": "Classification",
+    "dimensions": "Dimensions",
+    "back": "Back to Gallery"
+  },
+  "pagination": {
+    "first": "First",
+    "last": "Last",
+    "previous": "Previous",
+    "next": "Next",
+    "page": "Page",
+    "of": "of"
+  }
+}
