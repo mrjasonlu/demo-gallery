@@ -1,4 +1,4 @@
-import Skeleton from '@/components/skeleton/skeleton';
+import Skeleton from '@/components/skeleton/Skeleton';
 
 export default function ArtWorkSkeleton() {
   return (

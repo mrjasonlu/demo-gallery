@@ -1,5 +1,5 @@
 import { screen } from '@testing-library/react';
-import { vi, Mock } from 'vitest';
+import { vi } from 'vitest';
 import { BrowserRouter } from 'react-router-dom';
 import { renderWithProviders } from '@/utils/test-utils';
 import ArtWork from '../ArtWork';
