@@ -14,7 +14,7 @@ export default function AppLayout() {
       <main className="flex-grow w-full">
         <Outlet />
       </main>
-      <footer className="px-10 py-5 bg-gray-200">
+      <footer className="mt-10 px-10 py-5 bg-gray-200">
         <div className="max-w-7xl mx-auto flex flex-row gap-5">
           <p className="mr-auto font-semibold text-teal-600">JL Gallery</p>
           <p className="ml-auto">Jason Lu - {currentYear} </p>
