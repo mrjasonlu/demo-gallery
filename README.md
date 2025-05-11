@@ -12,7 +12,6 @@ Author: Jason Lu
 ## Enviroment Requirements:
 
 - Node => 20
-- Node / NPM
 
 ## Getting Started
 
