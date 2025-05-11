@@ -10,6 +10,7 @@ import {
   selectLimit,
   selectCurrentPage,
 } from '@/store/globalSlice';
+import { useEffect } from 'react';
 
 const options = [30, 50, 75, 100];
 
@@ -17,6 +18,10 @@ export default function ArtWorks() {
   const dispatch = useAppDispatch();
   const limit = useAppSelector(selectLimit);
   const currentPage = useAppSelector(selectCurrentPage);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [currentPage, limit]);
 
   const { data, isError, isLoading, isSuccess, isFetching } =
     useGetArtWorksQuery({
