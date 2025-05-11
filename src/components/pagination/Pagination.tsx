@@ -5,12 +5,14 @@ type PaginationProps = {
   total_pages: number;
   current_page: number;
   onPageChange: (page: number) => void;
+  className?: string;
 };
 
 export default function Pagination({
   total_pages,
   current_page,
   onPageChange,
+  className,
 }: PaginationProps) {
   const handlePageChange = (page: number) => {
     const newPage = Math.max(1, Math.min(page, total_pages));
@@ -18,7 +20,7 @@ export default function Pagination({
   };
 
   return (
-    <div className="flex justify-center mt-4">
+    <nav className={cn('flex justify-center', className)}>
       <button
         type="button"
         className={cn(
@@ -27,6 +29,7 @@ export default function Pagination({
         )}
         disabled={current_page === 1}
         onClick={() => handlePageChange(1)}
+        title={messages.pagination.first}
       >
         {`<< ${messages.pagination.first}`}
       </button>
@@ -38,10 +41,11 @@ export default function Pagination({
         )}
         disabled={current_page === 1}
         onClick={() => handlePageChange(current_page - 1)}
+        title={messages.pagination.previous}
       >
-        {'< Prev'}
+        {`< ${messages.pagination.previous}`}
       </button>
-      <span className="mx-2">
+      <span className="mx-2" aria-current="page">
         {`${messages.pagination.page} ${current_page} ${messages.pagination.of} ${total_pages}`}
       </span>
       <button
@@ -52,6 +56,7 @@ export default function Pagination({
         )}
         disabled={current_page === total_pages}
         onClick={() => handlePageChange(current_page + 1)}
+        title={messages.pagination.next}
       >
         {`${messages.pagination.next} >`}
       </button>
@@ -63,9 +68,10 @@ export default function Pagination({
         )}
         disabled={current_page === total_pages}
         onClick={() => handlePageChange(total_pages)}
+        title={messages.pagination.last}
       >
         {`${messages.pagination.last} >>`}
       </button>
-    </div>
+    </nav>
   );
 }

@@ -40,7 +40,7 @@ export default function ArtWorks() {
     const { config, data: artWorks, pagination } = data;
 
     return (
-      <div className="p-5 max-w-7xl mx-auto">
+      <div className="p-5 max-w-7xl mx-auto w-full">
         <header className="flex items-center pb-8">
           <div className="ml-auto flex p-5 items-center">
             <label htmlFor="results-per-page">
@@ -78,6 +78,7 @@ export default function ArtWorks() {
           ))}
         </div>
         <Pagination
+          className="mt-15"
           total_pages={pagination.total_pages}
           current_page={pagination.current_page}
           onPageChange={(page) => dispatch(setCurrentPage(page))}

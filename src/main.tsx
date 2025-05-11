@@ -6,6 +6,7 @@ import ArtWorks from './features/artworks/ArtWorkList';
 import { store } from './store/store';
 import { BrowserRouter, Route, Routes } from 'react-router';
 import AppLayout from '@/components/global/appLayout/AppLayout';
+import ScrollToTop from '@/utils/router/scrollToTop';
 import './index.css';
 
 const container = document.getElementById('root');
@@ -17,6 +18,7 @@ if (container) {
     <StrictMode>
       <Provider store={store}>
         <BrowserRouter>
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<AppLayout />}>
               <Route index element={<ArtWorks />} />
