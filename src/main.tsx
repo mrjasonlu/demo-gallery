@@ -6,7 +6,7 @@ import ArtWorks from './features/artworks/ArtWorkList';
 import { store } from './store/store';
 import { BrowserRouter, Route, Routes } from 'react-router';
 import AppLayout from '@/components/global/appLayout/AppLayout';
-import ScrollToTop from '@/utils/router/scrollToTop';
+import ScrollToTop from '@/utils/router/ScrollToTop';
 import './index.css';
 
 const container = document.getElementById('root');
